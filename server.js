@@ -5,6 +5,7 @@ const userAuthentication = require('./Middleware/userAuthentication')
 const {productRoutes} = require('./Routers/product.router')
 const {cartRouter} = require('./Routers/cart.router')
 const { orderPlacedRouter } = require("./Routers/orderPlaced.router")
+const { orderHistoryRouter } = require("./Routers/orderHistory.router")
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const {connection} = require("./db")
@@ -42,6 +43,7 @@ app.use('/user',UserRouter)
 app.use('/product', productRoutes)
 app.use('/cart', userAuthentication.verfiyToken, cartRouter)
 app.use('/orderPlaced', userAuthentication.verfiyToken, orderPlacedRouter)
+app.use('/orderHistory', userAuthentication.verfiyToken, orderHistoryRouter)
 
 
 app.listen(process.env.port, async()=>{
