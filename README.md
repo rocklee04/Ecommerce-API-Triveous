@@ -38,10 +38,7 @@ For product management, use the query parameter adminPassword=admin for authenti
 
 You can find detailed documentation for this API using Swagger. It describes the available endpoints, request and response formats, and more.
 
-## How to Access Swagger Documentation
-
-1. Start the application by running npm start.
-2. Open a web browser and go to http://localhost:PORT/api-docs.
+ [Swagger Doc Link](https://ecommerce-api-n084.onrender.com/api-docs/)
 
 ## Deployed Link
 
